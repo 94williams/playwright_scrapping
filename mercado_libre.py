@@ -1,10 +1,10 @@
 from playwright.sync_api import sync_playwright
-import polar as pl
+import polars as pl
 
 playwright = sync_playwright().start()
 browser = playwright.chromium.launch(headless=False)
 
-page = browser.newpage()
+page = browser.new_page()
 query = "Sonos move 2"
 url = f"https://www.mercadolibre.com.mx/\
         {query.replace(' ','-')}"
